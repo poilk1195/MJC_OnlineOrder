@@ -1,0 +1,61 @@
+﻿@{
+    ViewBag.Title = "便當";
+}
+
+
+<!-- 不同的按鈕 -->
+<div data-toggle="modal" data-target="#myModal" data-img="https://tip-tr4cdn.cdn.hinet.net/tra-tip-web/tip/img/42fe4e64-667e-4ce6-a207-0e0ffd349ad1/207x155">Button 1</div>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" data-img="https://i0.wp.com/nellydyu.tw/wp-content/uploads/20200622114806_14.jpg?resize=900%2C675&quality=100&ssl=1">Button 2</button>
+
+
+<div style="text-align:center;"><h1>便當類</h1></div>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-6 col-md-4">
+            <div class="panel panel-default" onclick="showModal()" id="tag1"  data-target="#myModal" data-img="https://i0.wp.com/nellydyu.tw/wp-content/uploads/20200622114806_14.jpg?resize=900%2C675&quality=100&ssl=1">
+                <div class="panel-body"><img src="https://i0.wp.com/nellydyu.tw/wp-content/uploads/20200622114806_14.jpg?resize=900%2C675&quality=100&ssl=1" class="img-circle" width="90%" style="display:block; margin:auto;" alt="Image"></div>
+                <div class="panel-footer text-center">
+                    <h5>排骨飯  $90</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-6 col-md-4">
+            <div class="panel panel-default" id="tag1">
+                <div class="panel-body"><img src="https://tip-tr4cdn.cdn.hinet.net/tra-tip-web/tip/img/42fe4e64-667e-4ce6-a207-0e0ffd349ad1/207x155" class="img-circle" width="90%" style="display:block; margin:auto;" alt="Image"></div>
+                <div class="panel-footer text-center">
+                    <h5>魯肉飯  $90</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-6 col-md-4">
+            <div class="panel panel-default" id="tag1">
+                <div class="panel-body"><img src="https://tip-tr4cdn.cdn.hinet.net/tra-tip-web/tip/img/42fe4e64-667e-4ce6-a207-0e0ffd349ad1/207x155" class="img-circle" width="90%" style="display:block; margin:auto;" alt="Image"></div>
+                <div class="panel-footer text-center">
+                    <h5>魚排飯  $90</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-6 col-md-4">
+            <div class="panel panel-default" id="tag1">
+                <div class="panel-body"><img src="https://tip-tr4cdn.cdn.hinet.net/tra-tip-web/tip/img/42fe4e64-667e-4ce6-a207-0e0ffd349ad1/207x155" class="img-circle" width="90%" style="display:block; margin:auto;" alt="Image"></div>
+                <div class="panel-footer text-center">
+                    <h5>雞腿飯  $110</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-6 col-md-4">
+            <div class="panel panel-default" id="tag1">
+                <div class="panel-body"><img src="https://tip-tr4cdn.cdn.hinet.net/tra-tip-web/tip/img/42fe4e64-667e-4ce6-a207-0e0ffd349ad1/207x155" class="img-circle" width="90%" style="display:block; margin:auto;" alt="Image"></div>
+                <div class="panel-footer text-center">
+                    <h5>素食飯  $90</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="navbar sum-navbar-inverse navbar-fixed-bottom">
+    <div class="sum-container text-center">
+        <p><h3><span>小計 </span><span style="color:red;">$  </span><span>110</span></h3></p>
+    </div>
+</div>

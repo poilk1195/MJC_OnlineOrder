@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - 我的 ASP.NET 應用程式</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <script src="~/Scripts/site.js"></script>
+</head>
+
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("梅家村 便當", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("首頁", "Index", "Home")</li>
+                    <li>@Html.ActionLink("便當", "Bento", "Home")</li>
+                    <li>@Html.ActionLink("單點", "single", "Home")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="navbar sum-navbar-inverse navbar-fixed-bottom">
+        <div class="sum-container text-center">
+            <p><h3><span>小計 </span><span style="color:red;">$  </span><span>110</span></h3></p>
+        </div>
+    </div>
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - 我的 ASP.NET 應用程式</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+
+    <!-- 餐點 模態框架（Modal） -->
+    <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <!-- 餐點 圖片及價格 -->
+                    <div class="panel panel-default">
+                        <div class="panel-body"><img id="modal-img" class="img-responsive" src="default.jpg"></div>
+                        <div class="panel-footer text-center">
+                            <h4>排骨飯  $90</h4>
+                        </div>
+                    </div>
+                    <h6>蔬菜以當季為主，圖片僅供參考</h6>
+                    <div>
+                        <h3>餐點調整</h3>
+                        <label class="checkbox-btn"><input type="checkbox" name="variety" value="半飯" style="display: none;"><span class="btn btn-default">半飯</span></label>
+                        <label class="checkbox-btn"><input type="checkbox" name="variety" value="不要飯" style="display: none;"><span class="btn btn-default">不要飯</span></label>
+                    </div>
+                    <div>
+                        <h3>餐點加料</h3>
+                        <label class="checkbox-btn"><input type="checkbox" name="variety" value="加滷蛋+$10" style="display: none;"><span class="btn btn-default">加滷蛋+$10</span></label>
+                        <label class="checkbox-btn"><input type="checkbox" name="variety" value="加飯+$5" style="display: none;"><span class="btn btn-default">加飯+$5</span></label>
+                        <label class="checkbox-btn"><input type="checkbox" name="variety" value="加菜+$10" style="display: none;"><span class="btn btn-default">加菜+$10</span></label>
+
+                    </div>
+                    <form action="get.asp" name="form1" method="post">
+                        <input class="min" name="" type="button" value="-">
+                        <input class="text_box number" name="p_num" id="p_num" type="text" value="1" autocomplete="off" maxlength="3">
+                        <input class="add" name="" type="button" value="+">
+                        <input name="order_id" type="hidden" id="order_id" value="100001031911294718">
+                        <input name="p_price" type="hidden" id="p_price" value="130">
+                        <input name="p_id" type="hidden" id="p_id" value="UC06000031">
+                        <input name="counta" type="hidden" id="counta" value="1">
+                        <button type="submit" name="Submit" class="btn btn-default">加入餐車</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="#main-nav">
+        <img src="https://cdn.icon-icons.com/icons2/1369/PNG/512/-shopping-cart_90604.png" style="width: 64px; z-index: 100; position: fixed; right: 10px; bottom: 10px;" alt="回頂端" title="點我回到上方">
+    </a>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
